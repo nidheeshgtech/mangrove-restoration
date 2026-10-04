@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="csrf-token" content="AJU2ETIlJ7x9IbAk46GFKlK4rXWXXTzNUVfnusIJ">
+    <meta name="csrf-token" content="Oss587JZ6cf2uxodQk4sgUjf4GmuLDMAAPQS6ni8">
     <title>Mangrove Restoration Planner | Nabat.ai</title>
     <meta name="description" content="Assess mangrove restoration potential across your entire coastline and identify where to focus first. Free access to Restoration Potential on NabatOS.">
     <meta name="keywords" content="Nabat.ai, climate tech venture, roboticists, ecosystems">
@@ -16763,6 +16763,13 @@ footer .a-link {
   .mr-glow-btn:hover {
     transform: none;
   }
+  .mr-faq__answer,
+  .mr-faq__answer p,
+  .mr-faq__icon,
+  .mr-faq__icon::before,
+  .mr-faq__icon::after {
+    transition: none !important;
+  }
 }
 .mr-cta-row {
   display: flex;
@@ -18346,6 +18353,28 @@ footer .a-link {
     background: #096151;
   }
 }
+.mr-faq__answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mr-faq__answer-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+.mr-faq__item.is-open .mr-faq__answer {
+  grid-template-rows: 1fr;
+}
+.mr-faq__answer p {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.mr-faq__item.is-open .mr-faq__answer p {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.45s ease 0.12s, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.08s;
+}
 .mr-faq__answer p {
   margin-top: 12px !important;
   font-size: 14px;
@@ -18880,51 +18909,78 @@ footer .a-link {
             <div class="container"><div class="row"><div class="col-12 col-xxl-10 mx-auto">
                 <div class="mr-faq__header" data-scroll-reveal>
                     <h2 class="mr-heading__title">Frequently asked questions</h2>
-                    <p class="mr-faq__intro">Have questions about our methodology, scoring algorithm, or data pipelines? <br class="d-none d-lg-inline">Explore detailed answers below or connect with our ecological engineering team.</p>
+                    <p class="mr-faq__intro">Have questions about our methodology, scoring algorithm, or the demo? <br class="d-none d-lg-inline">Explore detailed answers below or connect with our ecological engineering team.</p>
                 </div>
 
                 <div class="mr-faq__grid" data-scroll-reveal>
                                             <div class="mr-faq__col">
                                                                                             <div class="mr-faq__item is-open" style="--mobile-order: 0">
                                     <button type="button" class="mr-faq__trigger" aria-expanded="true"  aria-controls="mr-faq-0" >
-                                        <span>How does the platform detect restoration sites?</span>
+                                        <span>What do I actually get with free access?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
                                                                             <div class="mr-faq__answer" id="mr-faq-0" >
-                                            <p>NabatOS uses multi-spectral satellite imagery combined with our proprietary machine learning models to analyze coastal hydrology, canopy height, and historical soil runoff. This allows us to pinpoint highly viable mangrove habitats automatically.</p>
+                                            <div class="mr-faq__answer-inner">
+                                                <p>The full Stage 1 product in NabatOS with all stages. You define your area of interest, and Restoration Potential scores every point across it from 0 to 100%, with the underlying maps and layers available and KML export for your areas of interest.</p>
+                                            </div>
                                         </div>
                                                                     </div>
                                                                                             <div class="mr-faq__item " style="--mobile-order: 2">
-                                    <button type="button" class="mr-faq__trigger" aria-expanded="false" >
+                                    <button type="button" class="mr-faq__trigger" aria-expanded="false"  aria-controls="mr-faq-1" >
                                         <span>How reliable is a score built only from satellites?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
+                                                                            <div class="mr-faq__answer" id="mr-faq-1"  aria-hidden="true" inert >
+                                            <div class="mr-faq__answer-inner">
+                                                <p>It draws on 5–10 years of imagery and more than 20 environmental predictors at 10 m resolution across your whole area. It&#039;s built for planning and prioritization. Certainty rises through Stages 2 to 4, where high-resolution mapping, drone scanning and field validation confirm what the screening indicates.</p>
+                                            </div>
+                                        </div>
                                                                     </div>
                                                                                             <div class="mr-faq__item " style="--mobile-order: 4">
-                                    <button type="button" class="mr-faq__trigger" aria-expanded="false" >
+                                    <button type="button" class="mr-faq__trigger" aria-expanded="false"  aria-controls="mr-faq-2" >
                                         <span>Which regions and habitats can I screen?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
+                                                                            <div class="mr-faq__answer" id="mr-faq-2"  aria-hidden="true" inert >
+                                            <div class="mr-faq__answer-inner">
+                                                <p>You can screen any region you want in the whole GCC region.</p>
+                                            </div>
+                                        </div>
                                                                     </div>
                                                     </div>
                                             <div class="mr-faq__col">
                                                                                             <div class="mr-faq__item " style="--mobile-order: 1">
-                                    <button type="button" class="mr-faq__trigger" aria-expanded="false" >
+                                    <button type="button" class="mr-faq__trigger" aria-expanded="false"  aria-controls="mr-faq-3" >
                                         <span>Do I need to send you data or arrange a site visit first?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
+                                                                            <div class="mr-faq__answer" id="mr-faq-3"  aria-hidden="true" inert >
+                                            <div class="mr-faq__answer-inner">
+                                                <p>No. The score is built entirely from open-source satellite imagery and public datasets. All you provide is the coastline or region you want screened.</p>
+                                            </div>
+                                        </div>
                                                                     </div>
                                                                                             <div class="mr-faq__item " style="--mobile-order: 3">
-                                    <button type="button" class="mr-faq__trigger" aria-expanded="false" >
+                                    <button type="button" class="mr-faq__trigger" aria-expanded="false"  aria-controls="mr-faq-4" >
                                         <span>What if my site scores low?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
+                                                                            <div class="mr-faq__answer" id="mr-faq-4"  aria-hidden="true" inert >
+                                            <div class="mr-faq__answer-inner">
+                                                <p>A low score still tells you something. Every low-suitability area comes with a reason: elevation, slope, tidal frequency, degradation. You learn whether a site is genuinely unsuitable or whether a specific, fixable constraint is holding it back.</p>
+                                            </div>
+                                        </div>
                                                                     </div>
                                                                                             <div class="mr-faq__item " style="--mobile-order: 5">
-                                    <button type="button" class="mr-faq__trigger" aria-expanded="false" >
+                                    <button type="button" class="mr-faq__trigger" aria-expanded="false"  aria-controls="mr-faq-5" >
                                         <span>How do I gain access to the full product?</span>
                                         <span class="mr-faq__icon" aria-hidden="true"></span>
                                     </button>
+                                                                            <div class="mr-faq__answer" id="mr-faq-5"  aria-hidden="true" inert >
+                                            <div class="mr-faq__answer-inner">
+                                                <p>Stage 1 gives you a scored view of your whole coastline. What it can&#039;t yet tell you is which of those high-scoring areas survives closer inspection.</p>
+                                            </div>
+                                        </div>
                                                                     </div>
                                                     </div>
                                     </div>
@@ -20122,9 +20178,13 @@ return initHeroIntro;
                 const answer = item.querySelector('.mr-faq__answer');
                 const open = !item.classList.contains('is-open');
 
+                // Height/opacity are animated in CSS off .is-open; keep closed answers out of the a11y tree.
                 item.classList.toggle('is-open', open);
                 trigger.setAttribute('aria-expanded', open);
-                if (answer) answer.hidden = !open;
+                if (answer) {
+                    answer.setAttribute('aria-hidden', !open);
+                    answer.inert = !open;
+                }
             });
         });
     </script>
